@@ -1,8 +1,10 @@
 package com.princylabs;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Chapter1Test {
 
@@ -18,8 +20,8 @@ public class Chapter1Test {
         String str = "qwerty";
         String str2 = "qwertyyy";
 
-        Assert.assertTrue(chapter1.hasUniqueChar(str));
-        Assert.assertTrue(!chapter1.hasUniqueChar(str2));
+        assertTrue(chapter1.hasUniqueChar(str));
+        assertTrue(!chapter1.hasUniqueChar(str2));
     }
 
     @Test
@@ -28,13 +30,13 @@ public class Chapter1Test {
         String str2 = "ytrewq";
         String str3 = "poiutb";
 
-        Assert.assertTrue(chapter1.permutation(str1,str2));
-        Assert.assertTrue(!chapter1.permutation(str1,str3));
+        assertTrue(chapter1.permutation(str1,str2));
+        assertTrue(!chapter1.permutation(str1,str3));
     }
 
     @Test
     public void testUrlify() {
         String str = "I am free      ";
-        Assert.assertEquals(chapter1.urlify(str.toCharArray(),9), "I%20am%20free");
+        assertEquals(chapter1.urlify(str.toCharArray(),9), "I%20am%20free");
     }
 }
